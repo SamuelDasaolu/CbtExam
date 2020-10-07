@@ -23,7 +23,7 @@ class Student{
 			
 			if (!empty($_POST['edit_username']) || !empty($_POST['edit_email'])) {
 				$new_user->editProfile($_SESSION['user_id']);
-				header('Location: /project/student/account/profile');
+				header('Location: /student/account/profile');
 			}
 
 		}

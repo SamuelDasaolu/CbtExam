@@ -12,7 +12,7 @@ class Views{
 		
 		$email = $_SESSION['name'];
 		if ($_SESSION['role'] == 'student'){
-			header('Location: /project/student/index');
+			header('Location: /student/index');
 		}
 		return render('admin', ['email'=>$email, 'courses'=>$courses]);
 	}
@@ -20,10 +20,10 @@ class Views{
 	public function studentIndexPage(){
 		
 		if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/account/login');
+			header('Location: /account/login');
 		}
 		if ($_SESSION['role'] != 'student'){
-			header('Location: /project/index');
+			header('Location: /index');
 		}
 		return render('Students/index', ['email' => $_SESSION['name']]);
 	}

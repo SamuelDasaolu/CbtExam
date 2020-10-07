@@ -13,7 +13,7 @@ class Courses
         
 
         if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
         }
         
         $status = $this->checkCourseForm();
@@ -60,7 +60,7 @@ class Courses
     {
         
         if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
         }
         $_SESSION['course_id'] = $course_id;
         $conn = $this->connectToDb();
@@ -138,7 +138,7 @@ class Courses
     {
         
         if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
         }
         $courses = $this->getCourses();
 
@@ -187,7 +187,7 @@ class Courses
     {
         
         if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
         }
         $_SESSION['exam_id'] = $exam_id;
         $conn = $this->connectToDb();

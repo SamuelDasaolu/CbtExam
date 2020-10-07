@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_SESSION['logged_in'])) {
-    header('Location: /project/account/login');
+    header('Location: /account/login');
 }
 
 ?>

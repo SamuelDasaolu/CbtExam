@@ -16,7 +16,7 @@ class Authentication{
 	public function checklogin(){
 		
 		if (isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
 		}else {
 			$this->login();
 		}
@@ -40,9 +40,9 @@ class Authentication{
 				$_SESSION['package'] = $user['package'];
 				$_SESSION['user'] = $user;
 				if ($user['role'] != 'student') {
-					header('Location: /project/index');
+					header('Location: /index');
 				}elseif ($user['role'] == 'student') {
-					header('Location: /project/student/index');
+					header('Location: /student/index');
 				}
 				
 			} else {
@@ -66,7 +66,7 @@ class Authentication{
 		
 		session_destroy();
 		// Redirect to the login page:
-		header('Location: /project/index');
+		header('Location: /index');
 	}
 
 	public function profilePage(){
@@ -82,7 +82,7 @@ class Authentication{
 	public function getProfile(){
 				
 		if (!isset($_SESSION['logged_in'])) {
-			header('Location: /project/index');
+			header('Location: /index');
 			// exit;
 		}
 		$qb = new QueryBuilder;
@@ -99,7 +99,7 @@ class Authentication{
 			
 			if (!empty($_POST['edit_username']) || !empty($_POST['edit_email'])) {
 				$this->editProfile($_SESSION['user_id']);
-				header('Location: /project/account/profile');
+				header('Location: /account/profile');
 			}
 
 		}
@@ -167,7 +167,7 @@ class Authentication{
 		$qb = new QueryBuilder;
 		$new_user = $qb->insert('accounts', ['username'=>$_POST['username_register'], 'first_name'=>$_POST['first_name'], 'last_name'=>$_POST['last_name'], 'email'=>$_POST['email_register'], 'password'=>$password])->get();
 		// session_destroy();
-		header('Location: /project/index');
+		header('Location: /index');
 	}
 	
 	public function passwordResetPage(){

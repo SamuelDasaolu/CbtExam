@@ -13,7 +13,7 @@ class isStudent{
     public function failed(){
         echo " You are not authorized to view this page, Not a student. Redirecting...";
         sleep(1);
-        header("Location: http://localhost/project/index");
+        header("Location: http://localhost/index");
 
     }
 }

@@ -9,24 +9,17 @@ class Authentication{
 	public $courses;
 
 	public function loginPage(){
-		echo "Page";
 		$this->checklogin();
 		return render('Userauthentication/login', []);
 	}
 
-	public function checklogin(){
-		echo "Check login";
-		
+	public function checklogin(){		
 		if (isset($_SESSION['logged_in'])) {
 			header('Location: /index');
-		}else {
-			$this->login();
 		}
 	}
 	
 	public function login(){
-		echo "login";
-
 		$email = isset($_POST['email'])? $_POST['email'] : '';
 		$password = isset($_POST['password']) ? $_POST['password'] : '';
 		$qb = new QueryBuilder();

@@ -4,7 +4,7 @@
 use App\Utilities\Router\Router;
 //Authentication Routes
 Router::get('/account/register', 'Authentication@registerPage', [], 'register');
-Router::post('/account/login', 'Authentication@loginPage', [], 'login');
+Router::get('/account/login', 'Authentication@loginPage', [], 'login');
 Router::get('/account/password_reset', 'Authentication@passwordResetPage', ['auth'], 'password_reset');
 Router::get('/account/logout', 'Authentication@logoutPage', [], 'logout');
 

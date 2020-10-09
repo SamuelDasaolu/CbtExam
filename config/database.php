@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "DBHOST" => "heroku_33ac80e09e697b9",
+    "DBHOST" => "us-cdbr-east-05.cleardb.net",
 
     "DBPASS" => "449c4d61",
 

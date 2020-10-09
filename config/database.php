@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "DBHOST" => "us-cdbr-east-05.cleardb.net",
+    "DBHOST" => "us-cdbr-east-02.cleardb.com",
 
     "DBPASS" => "449c4d61",
 

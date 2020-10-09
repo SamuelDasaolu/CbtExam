@@ -108,8 +108,8 @@ class Courses
         $host = config('database.DBHOST');
         $user = config('database.DBUSER');
 
-        // $conn = mysqli_connect($host, $user, $dbPass, $dbName);
-        $conn = mysqli_connect('localhost', 'root', '', 'mvc_framework_test');
+        $conn = mysqli_connect($host, $user, $dbPass, $dbName);
+        // $conn = mysqli_connect('localhost', 'root', '', 'mvc_framework_test');
         // exit(var_dump($conn));
 
         if (!$conn) {

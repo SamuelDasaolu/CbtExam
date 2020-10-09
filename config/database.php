@@ -1,11 +1,11 @@
 <?php
 
 return [
-    "DBHOST" => "localhost",
+    "DBHOST" => "heroku_33ac80e09e697b9",
 
-    "DBPASS" => "",
+    "DBPASS" => "449c4d61",
 
-    "DBUSER" => "root",
+    "DBUSER" => "b1a3255f56d4a4",
 
-    "DBNAME" => "mvc_framework_test",
+    "DBNAME" => "heroku_33ac80e09e697b9",
 ];

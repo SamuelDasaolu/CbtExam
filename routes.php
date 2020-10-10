@@ -11,12 +11,12 @@ Router::get('/account/logout', 'Authentication@logoutPage', [], 'logout');
 
 
 //Admin Routes
-Router::get('', 'Views@indexPage', ['auth','staff'], 'home');
+Router::get('/index', 'Views@indexPage', ['auth','staff'], 'home');
 Router::get('/account/profile','Authentication@profilePage', ['auth', 'staff'], 'profile');
 Router::get('/account/profile/:id/edit', 'Authentication@editProfilePage', ['auth', 'staff'], 'profile_edit');
 
 //Student Routes
-Router::get('cbt_exam', 'Views@studentIndexPage', ['auth', 'student'], 'student_home');
+Router::get('', 'Views@studentIndexPage', ['auth', 'student'], 'student_home');
 Router::get('/student/index', 'Views@studentIndexPage', ['auth', 'student'], 'student_home');
 Router::get('/student/account/profile','Student@studentProfilePage', ['auth', 'student'], 'student_profile');
 Router::get('/student/account/profile/:id/edit', 'Student@editStudentProfilePage', ['auth', 'student'], 'student_profile_edit');

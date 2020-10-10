@@ -11,7 +11,7 @@ Router::get('/account/logout', 'Authentication@logoutPage', [], 'logout');
 
 
 //Admin Routes
-Router::get('/index', 'Views@indexPage', ['auth','staff'], 'home');
+Router::get('', 'Views@indexPage', ['auth','staff'], 'home');
 Router::get('/account/profile','Authentication@profilePage', ['auth', 'staff'], 'profile');
 Router::get('/account/profile/:id/edit', 'Authentication@editProfilePage', ['auth', 'staff'], 'profile_edit');
 

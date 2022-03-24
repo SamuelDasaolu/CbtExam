@@ -62,7 +62,10 @@ class Connection implements ConnectionContract{
 
 	protected function connect(){
 
-		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName);
+// 		for connection using mysqli
+// 		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName);
+// 		Connection usin PostgreSQL
+		$this->conn = pg_connect($this->host,$this->user,$this->dbPass,$this->dbName);
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: \n".mysqli_connect_error());
 			

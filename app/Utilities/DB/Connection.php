@@ -63,18 +63,17 @@ class Connection implements ConnectionContract{
 
 	protected function connect(){
 
-// 		for connection using mysqli
-// 		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName);
 // 		Connection usin PostgreSQL
 //		$db_connection = pg_connect("host=localhost dbname=dbname user=username password=password");
 
 // 		$this->conn = pg_connect($this->host $this->port $this->dbName $this->user $this->dbPass);
-		$host        = "host = ec2-54-157-234-29.compute-1.amazonaws.com";
-		$port        = "port = 5432";
-		$dbname      = "dbname = d4rg9rmpa4q9or";
-		$credentials = "user = wdsbntrykrxisx password=3193407753c309de6d805b56bf1b1b9cc0dfda70772e6c7f87eb86daa35e32c6";
-
-		$this->conn = pg_connect( "$host $port $dbname $credentials"  ); 
+// 		$host        = "host = ec2-54-157-234-29.compute-1.amazonaws.com";
+// 		$port        = "port = 5432";
+// 		$dbname      = "dbname = d4rg9rmpa4q9or";
+// 		$credentials = "user = wdsbntrykrxisx password=3193407753c309de6d805b56bf1b1b9cc0dfda70772e6c7f87eb86daa35e32c6";
+// 		$this->conn = mysqli_connect( "$host $port $dbname $credentials"  ); 
+		
+		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName);
 		
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: \n".mysqli_connect_error());

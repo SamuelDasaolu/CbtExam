@@ -75,7 +75,6 @@ class Connection implements ConnectionContract{
 
 		
 		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName, $this->port);
-		echo $this->conn;
 		
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: ".mysqli_connect_error());
@@ -85,15 +84,15 @@ class Connection implements ConnectionContract{
 	}
 
 	public function getOne($sql){
-		$this->result = pg_query($this->conn,$sql);
-		return pg_fetch_assoc($this->result);
+		$this->result = mysqli_query($this->conn,$sql);
+		return mysqli_fetch_assoc($this->result);
 
 	}
 
 	public function getMany($sql){
-		$this->result = pg_query($this->conn,$sql);
-		$results = pg_fetch_all($this->result, MYSQLI_ASSOC);
-		pg_free_result($this->result); //free result
+		$this->result = mysqli_query($this->conn,$sql);
+		$results = mysqli_fetch_all($this->result, MYSQLI_ASSOC);
+		mysqli_free_result($this->result); //free result
 
 		return  $results;
 	}
@@ -108,7 +107,7 @@ class Connection implements ConnectionContract{
 	
 	public function pushInsert($sql) :bool
 	{
-		return pg_query($this->conn,$sql);
+		return mysqli_query($this->conn,$sql);
 	}
 	public function deleteData($sql) :bool
 	{

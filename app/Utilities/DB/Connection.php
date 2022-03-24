@@ -84,15 +84,15 @@ class Connection implements ConnectionContract{
 	}
 
 	public function getOne($sql){
-		$this->result = mysqli_query($this->conn,$sql);
-		return mysqli_fetch_assoc($this->result);
+		$this->result = pg_query($this->conn,$sql);
+		return pg_fetch_assoc($this->result);
 
 	}
 
 	public function getMany($sql){
-		$this->result = mysqli_query($this->conn,$sql);
-		$results = mysqli_fetch_all($this->result, MYSQLI_ASSOC);
-		mysqli_free_result($this->result); //free result
+		$this->result = pg_query($this->conn,$sql);
+		$results = pg_fetch_all($this->result, MYSQLI_ASSOC);
+		pg_free_result($this->result); //free result
 
 		return  $results;
 	}
@@ -107,7 +107,7 @@ class Connection implements ConnectionContract{
 	
 	public function pushInsert($sql) :bool
 	{
-		return mysqli_query($this->conn,$sql);
+		return pg_query($this->conn,$sql);
 	}
 	public function deleteData($sql) :bool
 	{

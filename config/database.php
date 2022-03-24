@@ -1,13 +1,13 @@
 <?php
 
 return [
-    "DBHOST" => "http://db4free.net/",
+    "DBHOST" => "db4free.net",
 
     "DBPASS" => "password",
 
-    "DBUSER" => "b1a3255f56d4a4",
+    "DBUSER" => "sammy_db",
 
-    "DBNAME" => "sammy_db",
+    "DBNAME" => "cbt_technologies",
     
     "DBPORT" => "3306",
 ];

@@ -68,7 +68,7 @@ class Connection implements ConnectionContract{
 // 		Connection usin PostgreSQL
 //		$db_connection = pg_connect("host=localhost dbname=dbname user=username password=password");
 
-		$this->conn = pg_connect("$this->host $this->port $this->dbName $this->user $this->dbPass");
+		$this->conn = pg_connect($this->host $this->port $this->dbName $this->user $this->dbPass);
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: \n".mysqli_connect_error());
 			

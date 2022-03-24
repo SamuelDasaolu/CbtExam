@@ -73,7 +73,7 @@ class Connection implements ConnectionContract{
 // 		$credentials = "user = wdsbntrykrxisx password=3193407753c309de6d805b56bf1b1b9cc0dfda70772e6c7f87eb86daa35e32c6";
 // 		$this->conn = mysqli_connect( "$host $port $dbname $credentials"  ); 
 		
-		$db_host        = 'https://www.db4free.net/';
+		$db_host        = 'www.db4free.net';
 		$db_user        = 'sammy_db';
 		$db_pass        = 'password';
 		$db_database    = 'cbt_technologies'; 

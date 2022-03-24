@@ -73,7 +73,7 @@ class Connection implements ConnectionContract{
 // 		$credentials = "user = wdsbntrykrxisx password=3193407753c309de6d805b56bf1b1b9cc0dfda70772e6c7f87eb86daa35e32c6";
 // 		$this->conn = mysqli_connect( "$host $port $dbname $credentials"  ); 
 		
-		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName);
+		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName, $this->port);
 		
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: \n".mysqli_connect_error());

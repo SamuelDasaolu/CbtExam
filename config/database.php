@@ -18,4 +18,6 @@ return [
     "DBUSER" => "wdsbntrykrxisx",
 
     "DBNAME" => "d4rg9rmpa4q9or",
+    
+    "DBPORT" => "5432",
 ];

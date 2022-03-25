@@ -85,7 +85,6 @@ class Connection implements ConnectionContract{
 
 	public function getOne($sql){
 		$this->result = mysqli_query($this->conn,$sql);
-		die("Result: $this->result");
 		return mysqli_fetch_assoc($this->result);
 
 	}

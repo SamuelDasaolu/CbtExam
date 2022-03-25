@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use App\Controllers\Authentication;
 use App\Utilities\Router\Router;

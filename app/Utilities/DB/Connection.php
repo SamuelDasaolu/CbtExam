@@ -91,7 +91,7 @@ class Connection implements ConnectionContract{
 
 	public function getMany($sql){
 		$this->result = mysqli_query($this->conn,$sql);
-		die("Result: "+$this->result);
+		die("Result: $this->result");
 		$results = mysqli_fetch_all($this->result, MYSQLI_ASSOC);
 		mysqli_free_result($this->result); //free result
 

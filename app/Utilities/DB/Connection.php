@@ -75,7 +75,6 @@ class Connection implements ConnectionContract{
 
 		
 		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName, $this->port);
-		die("$this-conn");
 		
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: ".mysqli_connect_error());

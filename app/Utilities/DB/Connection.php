@@ -75,6 +75,7 @@ class Connection implements ConnectionContract{
 
 		
 		$this->conn = mysqli_connect($this->host,$this->user,$this->dbPass,$this->dbName, $this->port);
+		die("$this-conn");
 		
 		if (!$this->conn) {
 			throw new \Exception("Failed to connect: ".mysqli_connect_error());
@@ -85,6 +86,7 @@ class Connection implements ConnectionContract{
 
 	public function getOne($sql){
 		$this->result = mysqli_query($this->conn,$sql);
+		die("Result: $this->result");
 		return mysqli_fetch_assoc($this->result);
 
 	}

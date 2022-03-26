@@ -29,6 +29,7 @@ class Courses
         // exit;
 
 
+
         return render('Courses/add_course', ['courses' => $courses, 'message' => $message]);
     }
 
